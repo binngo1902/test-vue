@@ -1,26 +1,33 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <PostList />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PostList from "./components/PostList";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    PostList
   }
-}
+};
 </script>
 
-<style>
+<style  scoped>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-family: "Roboto", sans-serif;
+
+  .news-api-link {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background: #fff;
+  }
 }
 </style>
